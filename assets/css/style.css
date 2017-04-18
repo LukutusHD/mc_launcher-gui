@@ -6,11 +6,6 @@
     text-align: center;
 }
 
-/*.background{
-    position: fixed;
-    background-size: cover;
-}*/
-
 body {
     background: url(../bilder/background.png);
 }
@@ -30,6 +25,18 @@ body {
     text-align: center;
 }
 
+#login_window{
+    display: inline-block;
+    height: 32px;
+    width: 55px;
+    line-height: 32px;
+    text-align: center;
+    color: lightgray;
+    text-decoration: inherit;
+    text-decoration: solid;
+    background: #586069;
+}
+
 #close,
 #minimize {
     display: inline-block;
@@ -46,6 +53,7 @@ body {
     margin-left: 4px;
 }
 
+#login_window:hover,
 #close:hover,
 #minimize:hover {
     color: whitesmoke;
