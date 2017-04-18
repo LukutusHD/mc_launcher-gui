@@ -3,6 +3,7 @@ const path = require("path");
 const url = require("url");
 
 let button = document.getElementById("login_window");
+let loginWindow = null;
 
 button.onclick = function createWindow() {
     loginWindow = new BrowserWindow({
@@ -15,10 +16,12 @@ button.onclick = function createWindow() {
     });
 
     loginWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'login.html'),
+        pathname: path.join(__dirname, 'LoginWindow.html'),
         protocol: 'file:',
         slashes: true,
     }));
+
+    loginWindow.webContents.openDevTools();
 
     loginWindow.on('closed', () => {
         loginWindow = null;
