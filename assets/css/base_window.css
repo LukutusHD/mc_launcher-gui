@@ -28,14 +28,15 @@ body {
 #login_window{
     display: inline-block;
     height: 32px;
-    width: 55px;
+    width: 50px;
     line-height: 32px;
     text-align: center;
     color: lightgray;
     text-decoration: none;
-    background: #586069;
+    background: #1C1C1C;
 }
 
+#options,
 #close,
 #minimize {
     display: inline-block;
@@ -45,13 +46,18 @@ body {
     text-align: center;
     color: grey;
     text-decoration: none;
-    background: #586069;
+    background: #1C1C1C;
+}
+
+#options {
+    margin-right: 1px;
 }
 
 #close {
     margin-left: 4px;
 }
 
+#options:hover,
 #login_window:hover,
 #close:hover,
 #minimize:hover {
@@ -64,10 +70,4 @@ body {
     height: 100%;
     width: 97%;
     object-fit: cover;
-}
-
-.login{
-
-
-
 }
