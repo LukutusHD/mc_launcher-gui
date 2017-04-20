@@ -4,33 +4,48 @@ const url = require("url");
 
 let button = document.getElementById("login_window");
 let option_window = document.getElementById("options");
+let login_1 = 0;
+let option_1 = null;
 let loginWindow = null;
 let optionWindow = null;
 
-button.onclick = function createWindow() {
-    loginWindow = new BrowserWindow({
-        "height": 200,
-        "width": 290,
-        "title": "Login",
-        "menu": null,
-        "icon": "./gui/icon.png",
-        "frame": false,
-    });
+button.onclick = function() {
+if (login_1 === 0) {
+    function createWindow() {
 
-    loginWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'LoginWindow.html'),
-        protocol: 'file:',
-        slashes: true,
-    }));
+        loginWindow = new BrowserWindow({
+            "height": 200,
+            "width": 290,
+            "title": "Login",
+            "menu": null,
+            "icon": "./gui/icon.png",
+            "frame": false,
+        });
 
-    loginWindow.webContents.openDevTools();
+        loginWindow.loadURL(url.format({
+            pathname: path.join(__dirname, 'LoginWindow.html'),
+            protocol: 'file:',
+            slashes: true,
+        }));
 
-    loginWindow.on('closed', () => {
-        loginWindow = null;
-    });
+        loginWindow.webContents.openDevTools();
+
+        loginWindow.on('closed', () => {
+            loginWindow = null;
+        }
+    }
+}
+
+else (login_1 === 1)
+    {
+
+
+    }
+}
 }
 
 option_window.onclick = function createWindow() {
+    if option_1
     optionWindow = new BrowserWindow({
         "height": 460,
         "width": 500,
