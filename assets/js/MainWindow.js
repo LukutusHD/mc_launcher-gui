@@ -4,66 +4,87 @@ const url = require("url");
 
 let button = document.getElementById("login_window");
 let option_window = document.getElementById("options");
-let login_1 = 0;
-let option_1 = null;
+
+console.log(button);
+
+let login_1 = false;
+let option_1 = false;
+
 let loginWindow = null;
 let optionWindow = null;
 
-button.onclick = function() {
-if (login_1 === 0) {
-    function createWindow() {
+function createWindow(windowObj, title, page) {
+    // Window Object ist eine Refferenz.
+    // Das heist, es enthält nur die Information, auf welchen Speicherbereich wir verweisen.
+    // in den Momen, wir hier in der Funktion ein neues Objekt instanziieren, wird auch das original
+    // eine Instanz des selben Objekts.
 
-        loginWindow = new BrowserWindow({
-            "height": 200,
-            "width": 290,
-            "title": "Login",
-            "menu": null,
-            "icon": "./gui/icon.png",
-            "frame": false,
-        });
-
-        loginWindow.loadURL(url.format({
-            pathname: path.join(__dirname, 'LoginWindow.html'),
-            protocol: 'file:',
-            slashes: true,
-        }));
-
-        loginWindow.webContents.openDevTools();
-
-        loginWindow.on('closed', () => {
-            loginWindow = null;
-        }
-    }
-}
-
-else (login_1 === 1)
-    {
+    // Beispiel: wir rufen diese Fuktion mit dem Object loginWindow auf.
+    // LoginWindow = A
+    // und übergeben die Refferenz auf LoginWindow als windowObj
+    // LoginWindow = A -----> windowObject = A
 
 
-    }
-}
-}
-
-option_window.onclick = function createWindow() {
-    if option_1
-    optionWindow = new BrowserWindow({
-        "height": 460,
-        "width": 500,
-        "title": "Option",
+    windowObj = new BrowserWindow({
+        "height": 200,
+        "width": 290,
+        "title": title,
         "menu": null,
         "icon": "./gui/icon.png",
         "frame": false,
     });
 
-    optionWindow.loadURL(url.format({
-        pathname: path.join(__dirname, 'OptionWindow.html'),
+    // Erzeigen wir ein neues Objekt, wird das Objekt auf die Originalposition geschrieben.
+    // windowObject = new B -------> LoginWindow = (new B)
+
+    windowObj.loadURL(url.format({
+        pathname: path.join(__dirname, page),
         protocol: 'file:',
         slashes: true,
     }));
 
-    optionWindow.webContents.openDevTools();
+    windowObj.webContents.openDevTools();
 
-    optionWindow.on('closed', () => {
-        optionWindow = null;
+    windowObj.on('closed', () => {
+        windowObj = null;
     });
+
+    // so ist der Parameter, den wir übergeben automatisch ein neues Object vom Typ Browserwindow.
+}
+
+button.onclick = function () {
+    console.log("hi");
+    if (!login_1) {
+        createWindow(loginWindow, "Login", "LoginWindow.html");
+        if (loginWindow !== null) {
+            loginWindow.show();
+        }
+    } else {
+
+    }
+};
+
+option_window.onclick = function createWindow() {
+    if (option_1) {
+        optionWindow = new BrowserWindow({
+            "height": 460,
+            "width": 500,
+            "title": "Option",
+            "menu": null,
+            "icon": "./gui/icon.png",
+            "frame": false,
+        });
+
+        optionWindow.loadURL(url.format({
+            pathname: path.join(__dirname, 'OptionWindow.html'),
+            protocol: 'file:',
+            slashes: true,
+        }));
+
+        optionWindow.webContents.openDevTools();
+
+        optionWindow.on('closed', () => {
+            optionWindow = null;
+        });
+    }
 }
