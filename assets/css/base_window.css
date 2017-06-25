@@ -50,9 +50,6 @@ body {
 
 #login{
 
-
-
-
 }
 
 
@@ -112,15 +109,16 @@ body {
 
 #creeper_a,
 #options_a {
+    background-color: #e32119;
     display: inline-block;
     padding-top: 4px;
-    color: #5a5a5a;
+    color: #f4e9e9;
     font-size: 100%;
-    margin-top: 2px;
     text-align: center;
-    height: 44px;
+    height: 42px;
     width: 68px;
 }
+
 
 /* Body */
 .logo{

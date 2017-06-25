@@ -5,14 +5,16 @@
     <title>Login</title>
     <link href="assets/css/base_window.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css" type="text/css">
-    <link href=""
+    <link href="assets/css/login_window.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-    <div id="header" style="-webkit-app-region: drag">
-        <span id="title">Login</span>
+
+    <div id="header" style="z-index: 1; -webkit-app-region: drag">
+        <span id="menu_close"></span>
         <a href="#" id="minimize" style="-webkit-app-region: no-drag"><i class="fa fa-window-minimize"></i></a>
         <a href="#" id="close" style="-webkit-app-region: no-drag"><i class="fa fa-times"></i></a>
     </div>
+    <img id="login_icon" src="icon.png" style="z-index: 3; -webkit-app-region: drag">
     <div>
         <input type="text" name="username1" id="username" placeholder="E-Mail" >
     </div>

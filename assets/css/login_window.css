@@ -1,3 +1,9 @@
+#login_icon {
+    position: static;
+    text-align: left;
+    background-size: auto, 24px;
+}
+
 #login{
 
 

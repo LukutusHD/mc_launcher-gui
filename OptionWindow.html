@@ -2,18 +2,33 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Options</title>
+    <title>MC Launcher</title>
     <link href="assets/css/base_window.css" type="text/css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 <div id="header" style="-webkit-app-region: drag">
-    <a href="#" id="login_window" style="-webkit-app-region: no-drag">Login</a>
-    <span id="title">MC Launcher Einstellungen</span>
-    <a href="#" id="minimize" style="-webkit-app-region: no-drag"><i class="fa fa-window-minimize"></i></a>
-    <a href="#" id="close" style="-webkit-app-region: no-drag"><i class="fa fa-times"></i></a>
+    <img id="icon" src="icon.png" style="-webkit-app-region: drag">
+    <div id="menu_close" style="-webkit-app-region: drag"></div>
+    <div>
+        <a href="#" id="close" style="-webkit-app-region: no-drag"><i class="fa fa-times"></i></a>
+        <a href="#" id="minimize" style="-webkit-app-region: no-drag"><i class="fa fa-window-minimize"></i></a>
+        <br>
+        <a href="#" id="login" style="-webkit-app-region: no-drag"><i>hallo</i></a>
+    </div>
 </div>
-    <a>Das sind die Einstellungen</a>
+<div id="menu">
+    <a href="MainWindow.html" id="news"><i class="fa fa-newspaper-o" style="font-size: 40px"></i></a>
+    <br>
+    <a id="creeper"><i class="fa fa-file-o" style="font-size: 40px"></i></a>
+    <br>
+    <a id="options_a"><i class="fa fa-cogs" style="font-size: 40px"></i></a>
+</div>
+<div>
+
+
+    <a></a>
+</div>
 <script type="text/javascript" src="assets/js/BaseWindow.js"> </script>
 <script type="text/javascript" src="assets/js/MainWindow.js"> </script>
 </body>
