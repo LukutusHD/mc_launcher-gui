@@ -20,6 +20,6 @@ button.onclick = function() {
             console.log(result.username);
         })
         .catch((error) => {
-            console.log(error);
+            alert(error);
         });
 };
