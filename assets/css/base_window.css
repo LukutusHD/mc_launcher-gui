@@ -11,9 +11,8 @@ body {
 }
 
 #wrapper{
-    width: 490px;
-    max-width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    margin-left: 74px;
 }
 
 
@@ -56,7 +55,7 @@ body {
 }
 
 #login{
-
+    -webkit-app-region: no-drag
 }
 
 
