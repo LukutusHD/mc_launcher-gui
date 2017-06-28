@@ -7,7 +7,7 @@ let loginWindow = null;
 
 button.onclick = function createWindow() {
     loginWindow = new BrowserWindow({
-        "height": 200,
+        "height": 250,
         "width": 290,
         "title": "Login",
         "menu": null,
