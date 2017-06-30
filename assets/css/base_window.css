@@ -55,8 +55,22 @@
     color: black;
 }
 
+
+/* User Menu */
 #menu_user{
     margin-right: 4px;
+}
+
+#skin_head{
+
+}
+
+#down_menu{
+    text-decoration: none;
+    color: black;
+
+
+
 }
 
 

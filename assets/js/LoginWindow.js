@@ -20,6 +20,6 @@ button.onclick = function() {
             console.log(result.username);
         })
         .catch((error) => {
-            alert(error);
+            alert("Incorrect username or password");
         });
 };
