@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'wombelius-rex';
+
+  src: url('../fonts/wombelius-rex.woff2') format('woff2'),
+       url('../fonts/wombelius-rex.woff') format('woff'),
+       url('../fonts/wombelius-rex.ttf') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+}
+
+.wombel {
+  display: inline-block;
+  font: normal normal normal 14px/1 'wombelius-rex';
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wombel-creeper:before {
+  content: "\2000";
+}
+
+.wombel-settings:before {
+  content: "\2001";
+}
+
+.wombel-grassblock:before {
+  content: "\2002";
+}
+
+.wombel-book-quill:before {
+  content: "\2003";
+}
