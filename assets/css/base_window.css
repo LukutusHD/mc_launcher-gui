@@ -16,6 +16,12 @@
     padding-right: 2px;
 }
 
+#wrapper_map{
+    width: 594px;
+    margin-left: 52px;
+    padding-right: 2px;
+}
+
 
 /* Kopf */
 #header {
@@ -118,9 +124,21 @@
     width: 48px;
 }
 
+#map{
+    display: inline-block;
+    padding-top: 4px;
+    color: #5a5a5a;
+    font-size: 100%;
+    margin-top: 2px;
+    text-align: center;
+    height: 35px;
+    width: 48px;
+}
+
 #news:hover,
 #creeper:hover,
-#options:hover{
+#options:hover,
+#map:hover {
     color: whitesmoke;
     background-color: #e32119;
     box-shadow: 0 0px 0 2px black inset;
@@ -156,6 +174,18 @@
 }
 
 #options_a{
+    background-color: #e32119;
+    display: inline-block;
+    padding-top: 4px;
+    color: #f4e9e9;
+    font-size: 100%;
+    text-align: center;
+    height: 35px;
+    width: 48px;
+    margin-top: 2px;
+}
+
+#map_a{
     background-color: #e32119;
     display: inline-block;
     padding-top: 4px;
