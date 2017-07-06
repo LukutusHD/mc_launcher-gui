@@ -1,7 +1,3 @@
-const {app, BrowserWindow} = require("electron").remote;
-const path = require("path");
-const url = require("url");
-
 let map = document.getElementById("map_open");
 let mapWindow = null;
 
@@ -23,4 +19,6 @@ map.onclick = function createWindow() {
     mapWindow.on('closed', () => {
         mapWindow = null;
     });
+
+    mapWindow.setMenu(null);
 }
