@@ -1,9 +1,12 @@
+
 #map_open{
+    position: fixed;
     text-decoration: none;
     color: #5a5a5a;
 }
 
-#map_open_text{
+#map_open:hover{
     text-decoration: none;
-    color: #5a5a5a;
+    color: whitesmoke;
 }
+
